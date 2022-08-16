@@ -79,45 +79,41 @@ def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
 
 
-REQD_PERMISSIONS = "https://t.me/SpEcHlDe/857"
-GIT_REPO_LINK = "https://github.com/SpEcHiDe/DeleteMessagesRoBot"
+REQD_PERMISSIONS = "/"
+GIT_REPO_LINK = "/"
 """ strings to be used in the bot """
 START_MESSAGE = get_config("START_MESSAGE", (
-    "I'm a bot that can delete <s>all</s> "
-    "your channel or supergroup messages. "
+    "Ben İmha edici Botum "
+    "herşeyi silmek benim görevim :). "
     "\n\n"
-    f"To use me: read 👉 {REQD_PERMISSIONS} 👈"
-    "\n\n"
-    f"In case of issues, contact 👉 {GIT_REPO_LINK} 👈"
 ))
 START_COMMAND = get_config("START_COMMAND", "start")
 DEL_ALL_COMMAND = get_config("DEL_ALL_COMMAND", "delall")
 BEGINNING_DEL_ALL_MESSAGE = get_config("BEGINNING_DEL_ALL_MESSAGE", (
-    "trying to delete all messages"
+    "tüm mesajları silmeye çalışıyorum"
 ))
 IN_CORRECT_PERMISSIONS_MESSAGE = get_config("IN_CORRECT_PERMISSIONS_MESSAGE", (
-    "something went wrong. \n\n"
+    "bir şeyler yanlış gitti. \n\n"
     "<code>{}</code>"
     "\n\n"
-    f"please verify <a href='{REQD_PERMISSIONS}'>all permissions</a>, "
-    "and try again after sometime."
+    f"lütfen tanımla <a href='{REQD_PERMISSIONS}'>tüm izinler</a>, "
+    "ve bir süre sonra tekrar deneyin."
 ))
 SEL_DEL_COMMAND = get_config("SEL_DEL_COMMAND", "seldel")
 BEGINNING_SEL_DEL_MESSAGE = get_config("BEGINNING_SEL_DEL_MESSAGE", (
-    "trying to delete your selected messages"
+    "seçtiğiniz mesajları silmeye çalışıyorum"
 ))
 DEL_FROM_COMMAND = get_config("DEL_FROM_COMMAND", "delfrom")
 DEL_TO_COMMAND = get_config("DEL_TO_COMMAND", "delto")
 NOT_USED_DEL_FROM_DEL_TO_MESSAGE = get_config(
     "NOT_USED_DEL_FROM_DEL_TO_MESSAGE", (
-        f"please use /{DEL_FROM_COMMAND} or /{DEL_TO_COMMAND} "
-        f"before using /{SEL_DEL_COMMAND}"
+        f"lütfen kullan /{DEL_FROM_COMMAND} or /{DEL_TO_COMMAND} "
+        f"kullanmadan önce /{SEL_DEL_COMMAND}"
     )
 )
 THANK_YOU_MESSAGE = get_config(
     "THANK_YOU_MESSAGE", (
-        "Thank You for using me, "
-        f"Join {REQD_PERMISSIONS} to support this Telegram Bot"
+        "beni kullandığın için teşekkür ederim, "
     )
 )
 TL_FILE_TYPES = (
